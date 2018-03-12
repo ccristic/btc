@@ -1,9 +1,9 @@
 body {
-  background-image: url("bg.png");
-  background-repeat: no-repeat;
-  background-size: inherit;
-  background-position-y: initial;
-  background-position-x: center;
+  background-image: url("bg.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 
 }
