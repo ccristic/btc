@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>&#x24;</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
   </head>
   <body>
 
@@ -20,7 +22,8 @@ if (request.status >= 200 && request.status < 400){
   console.log(data[1].rate);
 	var div = document.createElement("div");
 	div.innerHTML= data[1].rate;
-	document.body.appendChild(div);
+	document.getElementById("rate").appendChild(div);
+	document.title  += data[1].rate;
 } else {
   // We reached our target server, but it returned an error
 
@@ -33,5 +36,8 @@ request.onerror = function() {
 
 request.send();
 </script>
+<div class="container">
+<span class = "font">&#x24; </span><div id="rate"></div>
+</div>
   </body>
 </html>
