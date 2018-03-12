@@ -18,6 +18,9 @@ if (request.status >= 200 && request.status < 400){
   console.log(data[1]);
   console.log(data[1].code);
   console.log(data[1].rate);
+	var div = document.createElement("div");
+	div.innerHTML= data[1].rate;
+	document.body.appendChild(div);
 } else {
   // We reached our target server, but it returned an error
 
